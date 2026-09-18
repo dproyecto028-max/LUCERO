@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Total Rack | Estanterías metálicas a medida</title>
+    <meta
+      name="description"
+      content="Total Rack fabrica, vende y arma estanterías metálicas para comercios, depósitos, industrias y hogares."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="requestProgress" class="request-progress" aria-hidden="true">
+      <span></span>
+    </div>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <div class="logo-wrap">
+          <img
+            class="brand-mark"
+            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=160&q=80"
+            alt="Estanterías metálicas Total Rack"
+          />
+          <div class="logo">TOTAL <span>RACK</span></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#valores">Valores</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#promociones">Ofertas</a></li>
+        </ul>
+        <div class="nav-account-actions">
+          <button id="btnAcceder" type="button" class="btn-primary" onclick="openModal('loginModal')">Acceder</button>
+          <button id="btnCerrarSesion" type="button" class="btn-secondary hidden" onclick="cerrarSesion()">Cerrar sesión</button>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow">Fabricación · venta · armado en obra</span>
+          <h1>El espacio que necesitás. La estructura que lo soporta.</h1>
+          <p>
+            Diseñamos y armamos estanterías metálicas resistentes, modulares y a medida
+            para que cada metro de tu depósito, local o taller trabaje mejor.
+          </p>
+          <div class="hero-buttons">
+            <a href="#servicios" class="btn-primary">Ver soluciones</a>
+            <a href="#contacto" class="btn-secondary">Pedir presupuesto</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>+500</strong>
+              <span>proyectos instalados</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>estructura reforzada</span>
+            </div>
+            <div>
+              <strong>48 h</strong>
+              <span>respuesta comercial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel glass-card">
+          <div class="panel-badge">Solución destacada</div>
+          <h3>Rack industrial reforzado</h3>
+          <div class="price">A medida</div>
+          <ul>
+            <li>Estructura de acero pintado</li>
+            <li>Niveles regulables</li>
+            <li>Entrega y armado profesional</li>
+            <li>Presupuesto sin cargo</li>
+          </ul>
+          <button type="button" class="btn-primary w-100" onclick="contratarServicio('Rack industrial reforzado')">
+            Cotizar proyecto
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="contacto" class="section alt-bg">
+        <div class="container cta-box glass-card">
+          <div>
+            <span class="eyebrow accent">Hablemos de tu proyecto</span>
+            <h2>Registrate para pedir presupuestos, seguir pedidos y recibir asesoramiento.</h2>
+          </div>
+          <div class="cta-actions">
+            <button type="button" class="btn-primary" onclick="openModal('registerModal')">Registrarme</button>
+            <button type="button" class="btn-secondary" onclick="openModal('loginModal')">Iniciar sesión</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow accent">Quiénes somos</span>
+            <h2>Metal, precisión y orden para que tu negocio crezca.</h2>
+          </div>
+          <div class="grid-2">
+            <div class="video-card glass-card">
+              <iframe
+                src="https://www.youtube.com/embed/7Dyo2ohmKcU?si=I7QLbL4T8K3mN0Fv"
+                title="Video sobre estanterías metálicas"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="text-card">
+              <h3>Del plano al depósito</h3>
+              <p>
+                En Total Rack estudiamos tu espacio, calculamos la solución y nos ocupamos
+                del armado para que recibas una instalación firme, segura y lista para usar.
+              </p>
+              <ul class="check-list">
+                <li>Fabricación nacional con materiales resistentes.</li>
+                <li>Diseños modulares que se adaptan a tu operación.</li>
+                <li>Asesoramiento para aprovechar cada altura y pasillo.</li>
+                <li>Armado prolijo y acompañamiento posventa.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg" id="valores">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Nuestros valores</span>
+            <h2>La forma en que trabajamos también construye calidad.</h2>
+          </div>
+          <div class="grid-4 values-grid">
+            <article class="feature-box glass-card">
+              <div class="feature-icon">01</div>
+              <h3>Compromiso</h3>
+              <p>Cumplimos lo que prometemos. Cada armado, reparación o servicio de guardia lo tomamos como propio.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">02</div>
+              <h3>Responsabilidad y seguridad</h3>
+              <p>Trabajamos con normas de seguridad, materiales de calidad y personal capacitado. Tu mercadería y tu gente son prioridad.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">03</div>
+              <h3>Puntualidad</h3>
+              <p>Sabemos que el tiempo en un depósito vale. Llegamos a horario y entregamos en fecha.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">04</div>
+              <h3>Honestidad y transparencia</h3>
+              <p>Presupuesto claro, sin sorpresas. Te decimos lo que necesitás, no lo que más nos conviene vender.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">05</div>
+              <h3>Trabajo en equipo</h3>
+              <p>Somos un equipo unido, desde quien atiende hasta quien arma. Esa fuerza se nota en el resultado final.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">06</div>
+              <h3>Eficiencia y solución</h3>
+              <p>No solo vendemos estanterías: reparamos, reforzamos y optimizamos para que gastes menos.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">07</div>
+              <h3>Atención cercana</h3>
+              <p>Somos de Mendoza y estamos cerca. Ofrecemos atención personalizada, posventa y respuesta rápida por WhatsApp.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Nuestra diferencia</span>
+            <h2>Una solución completa, desde la medida hasta el último tornillo.</h2>
+          </div>
+          <div class="grid-4 difference-grid">
+            <article class="feature-box glass-card">
+              <div class="feature-icon">01</div>
+              <h3>Medimos y diseñamos</h3>
+              <p>Convertimos tus necesidades y medidas en una propuesta clara.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">02</div>
+              <h3>Fabricamos</h3>
+              <p>Elegimos perfiles, bandejas y refuerzos según la carga real.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">03</div>
+              <h3>Entregamos y armamos</h3>
+              <p>Coordinamos la instalación para que tu espacio quede operativo.</p>
+            </article>
+            <article class="feature-box glass-card">
+              <div class="feature-icon">04</div>
+              <h3>Te acompañamos</h3>
+              <p>Estamos disponibles para ampliar, reubicar o mejorar tu sistema.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="servicios" class="section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Soluciones de almacenamiento</span>
+            <h2>Elegí la configuración que mejor se adapta a tu operación.</h2>
+          </div>
+
+          <div class="grid-3">
+            <article class="pricing-card glass-card">
+              <span class="plan-tag">Comercios</span>
+              <h3>Góndola modular</h3>
+              <div class="price">A medida</div>
+              <ul>
+                <li>Estantes regulables</li>
+                <li>Ideal para locales y depósitos</li>
+                <li>Configuración por módulo</li>
+                <li>Armado en el lugar</li>
+              </ul>
+              <button type="button" class="btn-primary w-100" onclick="contratarServicio('Góndola modular')">
+                Consultar solución
+              </button>
+            </article>
+
+            <article class="pricing-card highlight glass-card">
+              <span class="plan-tag featured">Más elegida</span>
+              <h3>Rack picking</h3>
+              <div class="price">A medida</div>
+              <ul>
+                <li>Acceso rápido a la mercadería</li>
+                <li>Alta capacidad de carga</li>
+                <li>Planificación del layout</li>
+                <li>Montaje profesional</li>
+              </ul>
+              <button type="button" class="btn-primary w-100" onclick="contratarServicio('Rack picking')">
+                Cotizar ahora
+              </button>
+            </article>
+
+            <article class="pricing-card glass-card">
+              <span class="plan-tag">Industria</span>
+              <h3>Rack pesado</h3>
+              <div class="price">A medida</div>
+              <ul>
+                <li>Para pallets y cargas voluminosas</li>
+                <li>Estructura reforzada</li>
+                <li>Proyecto integral de depósito</li>
+                <li>Asesoramiento técnico</li>
+              </ul>
+              <button type="button" class="btn-primary w-100" onclick="contratarServicio('Rack pesado')">
+                Hablar con un asesor
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section alt-bg">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Cómo trabajamos</span>
+            <h2>Un equipo técnico que entiende tu operación.</h2>
+          </div>
+
+          <div class="grid-3">
+            <article class="team-card glass-card">
+              <div class="avatar avatar-1">01</div>
+              <h3>Relevamiento</h3>
+              <span>Escuchamos tu necesidad</span>
+              <p>Analizamos medidas, circulación, carga y tipo de mercadería.</p>
+              <small>Sin costo inicial</small>
+            </article>
+            <article class="team-card glass-card">
+              <div class="avatar avatar-2">02</div>
+              <h3>Propuesta</h3>
+              <span>Diseño funcional</span>
+              <p>Definimos módulos, alturas y accesorios para aprovechar el espacio.</p>
+              <small>Presupuesto claro</small>
+            </article>
+            <article class="team-card glass-card">
+              <div class="avatar avatar-3">03</div>
+              <h3>Instalación</h3>
+              <span>Montaje en tu espacio</span>
+              <p>Armamos, nivelamos y dejamos tu sistema listo para trabajar.</p>
+              <small>Equipo especializado</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="promociones" class="section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Ofertas de temporada</span>
+            <h2>Más capacidad y mejor orden para tu próximo proyecto.</h2>
+          </div>
+          <div class="grid-2">
+            <article class="promo-box glass-card">
+              <div class="promo-tag">Kit comercio</div>
+              <h3>Rack + módulos regulables</h3>
+              <p>Una base flexible para organizar stock, exhibición y reposición.</p>
+            </article>
+            <article class="promo-box glass-card">
+              <div class="promo-tag">Proyecto depósito</div>
+              <h3>Diseño + armado integral</h3>
+              <p>Planificamos tu layout y coordinamos la instalación de punta a punta.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt-bg">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Clientes que ya ordenaron su espacio</span>
+            <h2>La experiencia de nuestros clientes habla por nosotros.</h2>
+          </div>
+          <div class="grid-3">
+            <article class="testimonial glass-card">
+              <div class="stars">★★★★★</div>
+              <p>“Nos ayudaron a aprovechar la altura del depósito y el armado fue muy prolijo.”</p>
+              <strong>María V. · Comercio</strong>
+            </article>
+            <article class="testimonial glass-card">
+              <div class="stars">★★★★★</div>
+              <p>“La propuesta fue clara y los racks quedaron firmes, alineados y funcionales.”</p>
+              <strong>Javier S. · Logística</strong>
+            </article>
+            <article class="testimonial glass-card">
+              <div class="stars">★★★★★</div>
+              <p>“Pudimos ampliar el sistema sin cambiar todo. Eso nos ahorró tiempo y dinero.”</p>
+              <strong>Inés M. · Industria</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Detalles que importan</span>
+            <h2>Diseñado para durar, pensado para usarse todos los días.</h2>
+          </div>
+          <div class="training-grid">
+            <div class="training-item glass-card">
+              <h3>Resistencia real</h3>
+              <p>Materiales y refuerzos definidos de acuerdo con el peso y el uso.</p>
+            </div>
+            <div class="training-item glass-card">
+              <h3>Orden visible</h3>
+              <p>Más control de inventario, mejor circulación y menos tiempo buscando productos.</p>
+            </div>
+            <div class="training-item glass-card">
+              <h3>Fácil de ampliar</h3>
+              <p>La estructura modular acompaña el crecimiento de tu depósito o local.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="trabaja-con-nosotros">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow accent">Trabaja con nosotros</span>
+            <h2>Sumate al equipo de armado de Total Rack.</h2>
+          </div>
+          <div class="job-form-wrap glass-card">
+            <form id="formTrabajaConNosotros" class="job-form">
+              <div class="grid-2">
+                <input type="text" id="postulanteNombre" placeholder="Apellido y Nombre" required />
+                <input type="email" id="postulanteEmail" placeholder="Correo electrónico" required />
+                <input type="tel" id="postulanteTelefono" placeholder="Celular" required />
+                <select id="postulantePuesto" required>
+                  <option value="">Seleccioná un puesto</option>
+                  <option value="Armador de estanterías">Armador de estanterías</option>
+                  <option value="Vendedor técnico">Vendedor técnico</option>
+                  <option value="Diseño y medición">Diseño y medición</option>
+                  <option value="Administración">Administración</option>
+                </select>
+              </div>
+
+              <label class="file-label">Subí tu currículum (PDF):</label>
+              <input type="file" id="postulanteCvFile" accept="application/pdf" required />
+
+              <textarea id="postulanteMensaje" placeholder="Contanos un poco sobre vos y tu experiencia..." required></textarea>
+              <button type="submit" class="btn-primary w-100 mt-10">Enviar postulación</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+            <div class="logo-wrap">
+            <div class="brand-mark">TR</div>
+            <div class="logo">TOTAL <span>RACK</span></div>
+          </div>
+          <p>Estanterías metálicas a medida, venta, entrega y armado profesional.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#proyectos">Cómo trabajamos</a>
+          <a href="#promociones">Ofertas</a>
+          <a href="#trabaja-con-nosotros">Trabaja con nosotros</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" class="social-icon">📸 Instagram</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" class="social-icon">📘 Facebook</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="social-icon">💼 LinkedIn</a>
+        </div>
+      </div>
+      <div class="container group-signature">
+        <div class="group-rule"></div>
+        <img class="group-logo" src="grupo-lucero-logo.svg" alt="Logo Grupo Lucero" />
+        <p>Total Rack pertenece a Grupo Lucero</p>
+        <span>Empresas asociadas</span>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content glass-card">
+        <span class="close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>Iniciar sesión</h2>
+        <form id="formLogin">
+          <input type="text" id="loginDni" placeholder="DNI" required />
+          <input type="password" id="loginPass" placeholder="Contraseña" required />
+          <button type="submit" class="btn-primary w-100 mt-10">Ingresar</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="registerModal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content glass-card">
+        <span class="close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>Registro en Total Rack</h2>
+        <div class="tipo-registro-selector">
+          <button type="button" id="btnTipoCliente" class="btn-tab active" onclick="setTipoRegistro('cliente')">
+            Cliente
+          </button>
+          <button type="button" id="btnTipoColab" class="btn-tab" onclick="setTipoRegistro('colaborador')">
+            Colaborador
+          </button>
+        </div>
+
+        <form id="formRegistro">
+          <input type="hidden" id="regTipo" value="cliente" />
+          <input type="text" id="regNombre" placeholder="Apellido y Nombre" required />
+          <input type="text" id="regDni" placeholder="DNI" required />
+          <input type="password" id="regPass" placeholder="Contraseña" required />
+          <input type="email" id="regEmail" placeholder="Correo Electrónico" required />
+
+          <select id="regProvincia" required>
+            <option value="">Seleccioná una provincia</option>
+          </select>
+
+          <select id="regLocalidad" required>
+            <option value="">Seleccioná una localidad</option>
+          </select>
+          <input type="text" id="regCalle" placeholder="Calle" required />
+          <input type="text" id="regAltura" placeholder="Altura" required />
+
+          <input type="text" id="regCp" placeholder="Código Postal" readonly required />
+
+          <input type="tel" id="regCelular" placeholder="Nro de Celular" required />
+          <input type="text" id="regCodigoAdmin" class="hidden" placeholder="Código de acceso del administrador" />
+
+          <div id="colabFields" class="hidden">
+            <label class="file-label">Subí tu CV (PDF):</label>
+            <input type="file" id="regCvFile" accept="application/pdf" />
+            <label class="file-label">Subí tu foto de perfil:</label>
+            <input type="file" id="regFotoFile" accept="image/*" />
+          </div>
+
+          <button type="submit" id="btnRegistrar" class="btn-primary w-100 mt-10">Registrarse</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="dashboardCliente" class="dashboard hidden">
+      <div class="container">
+        <h2 class="section-title">Panel del cliente</h2>
+        <div class="grid-2">
+          <article class="glass-card">
+            <h3>Seguimiento de proyecto</h3>
+            <p>Consultá avances, cambios y detalles de tu pedido de estanterías.</p>
+            <button type="button" class="btn-secondary mt-10">Chatear con soporte</button>
+          </article>
+          <article class="glass-card">
+            <h3>Valoración del armado</h3>
+            <textarea id="resenaCliente" placeholder="Contanos cómo fue tu experiencia con Total Rack..."></textarea>
+            <button type="button" class="btn-primary mt-10" onclick="alert('¡Gracias por tu valoración!')">Enviar reseña</button>
+          </article>
+        </div>
+
+        <div class="grid-1 contract-wrap">
+          <article class="glass-card contract-card">
+            <h3>Solicitud de proyecto</h3>
+            <form id="formContratoServicio" class="contract-form">
+              <div class="grid-2">
+                <input type="number" id="contratoHoras" min="1" max="100" placeholder="Cantidad de módulos" required />
+                <select id="contratoTipoTrabajo" required>
+                  <option value="">Tipo de trabajo</option>
+                  <option value="Góndola modular">Góndola modular</option>
+                  <option value="Rack picking">Rack picking</option>
+                  <option value="Rack pesado">Rack pesado</option>
+                  <option value="Proyecto a medida">Proyecto a medida</option>
+                </select>
+              </div>
+
+              <textarea id="contratoDescripcion" placeholder="Contanos medidas aproximadas, tipo de carga y cantidad de niveles" required></textarea>
+
+              <label class="file-label">Subí el plano de tu proyecto:</label>
+              <input type="file" id="contratoPlano" accept="image/*,.pdf,.dwg,.dxf" required />
+
+              <button type="submit" class="btn-primary w-100 mt-10">Enviar solicitud de proyecto</button>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div id="dashboardColaborador" class="dashboard hidden">
+      <div class="container">
+        <h2 class="section-title">Portal del colaborador</h2>
+        <div class="grid-2">
+          <article class="glass-card">
+            <h3>Registro de jornada</h3>
+            <div class="jornada-row">
+              <button type="button" class="btn-success" onclick="registrarJornada('Inicio')">Iniciar jornada</button>
+              <button type="button" class="btn-danger" onclick="registrarJornada('Fin')">Finalizar jornada</button>
+            </div>
+            <p id="statusJornada" class="status-text"></p>
+          </article>
+          <article class="glass-card">
+            <h3>Reporte de actividad</h3>
+            <form id="formIncidente">
+              <select id="incidenteTipo" required>
+                <option value="">Seleccionar motivo</option>
+                <option value="Insumos">Falta de insumos</option>
+                <option value="Inmueble">Novedad del inmueble</option>
+                <option value="Otro">Otro reporte</option>
+              </select>
+              <textarea id="incidenteDesc" placeholder="Describí la novedad o incidencia..." required></textarea>
+              <button type="submit" class="btn-primary w-100 mt-10">Enviar reporte</button>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

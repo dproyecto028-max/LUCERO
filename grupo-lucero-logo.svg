@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title desc">
+  <title id="title">Grupo Lucero</title>
+  <desc id="desc">Logo institucional del Grupo Lucero</desc>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbbf24"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="24" fill="#1c2022" stroke="#f59e0b" stroke-width="4"/>
+  <path d="M83 34c-8-7-18-10-29-10-24 0-42 17-42 38s18 38 42 38c11 0 21-3 29-10V55H53v15h14v10c-4 2-8 3-13 3-14 0-24-9-24-21s10-21 24-21c7 0 13 2 18 7z" fill="url(#gold)"/>
+  <path d="M91 31v58h15V31z" fill="#f7f4ed"/>
+  <text x="140" y="59" fill="#f7f4ed" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="3">GRUPO</text>
+  <text x="140" y="91" fill="#fbbf24" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="3">LUCERO</text>
+</svg>
