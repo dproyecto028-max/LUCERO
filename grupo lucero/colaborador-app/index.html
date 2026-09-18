@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Total Rack | Colaborador</title>
+    <meta name="theme-color" content="#111315" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-logo" aria-label="Logo Total Rack">TR</div>
+          <div>
+            <p class="brand-kicker">COLABORADOR</p>
+            <h1>TOTAL RACK</h1>
+          </div>
+        </div>
+        <button id="btnLogout" class="ghost hidden" type="button">Cerrar sesión</button>
+      </header>
+
+      <main class="screen">
+        <section id="loginScreen" class="panel active">
+          <div class="card login-card">
+            <p class="eyebrow">Acceso del personal</p>
+            <h2>Iniciar sesión</h2>
+
+            <form id="loginForm" class="form-stack">
+              <label>
+                <span>DNI</span>
+                <input id="loginDni" type="text" placeholder="Ingrese su DNI" required />
+              </label>
+
+              <label>
+                <span>Contraseña</span>
+                <input id="loginPass" type="password" placeholder="Ingrese su contraseña" required />
+              </label>
+
+              <button class="primary" type="submit">Ingresar</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="dashboardScreen" class="panel hidden">
+          <div class="card status-card">
+            <p class="eyebrow">Bienvenido/a</p>
+            <h2 id="usuarioNombre">Colaborador</h2>
+            <p id="estadoJornada" class="status-pill neutral">Jornada no iniciada</p>
+          </div>
+
+          <div class="card">
+            <label>
+              <span>Lugar de trabajo</span>
+              <input id="lugarTrabajoInput" type="text" placeholder="Ej: Godoy Cruz - Oficina Central" required />
+            </label>
+
+            <div class="timer-wrap">
+              <span class="timer-label">Cronómetro</span>
+              <div id="cronometro" class="timer">00:00:00</div>
+            </div>
+
+            <div class="button-stack">
+              <button id="btnIniciarJornada" class="primary" type="button">Iniciar jornada</button>
+              <button id="btnFinalizarJornada" class="danger" type="button">Finalizar jornada</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="section-title">Reporte de novedad</p>
+            <textarea id="novedadesInput" rows="4" placeholder="Describí si hubo un inconveniente, falta de insumos, cambio de lugar o cualquier novedad..."></textarea>
+            <button id="btnReporte" class="secondary" type="button">Enviar reporte</button>
+          </div>
+
+          <div class="card">
+            <p class="section-title">Comprobante</p>
+            <div id="comprobanteJornada" class="comprobante-box">
+              Aún no se generó un comprobante.
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

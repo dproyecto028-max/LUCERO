@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the CLEANING SERVICE APP 1.0
+---------------------------------------------------
+
+app_name - 						CLEANING SERVICE APP
+app_alias - 					cleaningserviceapp
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Mendoza
+app_author_country - 			Argentina
+app_password - 					Rso3eIlmORgk
+app_versionName - 				versionName "1.0"
+app_versionCode - 				100
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Saturday 29th of August 2026 08:37:12 PM
+
+https://webintoapp.com
+---------------------------------------------------
+
